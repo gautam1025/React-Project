@@ -1,7 +1,7 @@
 import React from 'react'
 
 const App = () => {
-  const user = "Gautam"
+  const user = "User"
   return (
     <div>Hello {user}</div>
   )

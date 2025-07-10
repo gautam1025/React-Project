@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const App = () => {
-  const user = "User"
+  const [day, changeDay] = useState(1)
+
   return (
-    <div>Hello {user}</div>
+    <div>
+      <h1>Hello Gautam</h1>
+      <h3>Today is Day {day}</h3>
+      <button onClick={()=>{
+        changeDay(day+1)
+      }}>Change Day</button>
+    </div>
   )
 }
 

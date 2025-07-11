@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const App = () => {
 
+  const [username, setUsername] = useState('')
+
+  const submitHandler = (e)=>{
+    e.preventDefault()
+    console.log(username)
+    setUsername('')
+  }
 
   return (
     <div>
-      <form>
-        <input
+      <form onSubmit={(e)=>{
+        submitHandler(e)
+      }}>
+        <input 
+        value={username}
+        onChange={(e)=>{
+          setUsername(e.target.value)
+        }
+
+        }
         className='bg-white text-xl rounded px-3 py-4 m-5' 
         type='text'
         placeholder='Enter you name'

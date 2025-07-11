@@ -1,15 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const App = () => {
-  const [day, changeDay] = useState(1)
+
 
   return (
     <div>
-      <h1>Hello Gautam</h1>
-      <h3>Today is Day {day}</h3>
-      <button onClick={()=>{
-        changeDay(day+1)
-      }}>Change Day</button>
+      <form>
+        <input
+        className='bg-white text-xl rounded px-3 py-4 m-5' 
+        type='text'
+        placeholder='Enter you name'
+        ></input>
+        <button className='text-xl px-3 py-4 m-5 bg-yellow-500 rounded'>Submit</button>
+      </form>
     </div>
   )
 }
